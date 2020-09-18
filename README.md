@@ -50,25 +50,33 @@ Everyone interacting in the Gerint project’s codebases, issue trackers, chat r
 Antes de executar qualquer serviço, deve ser criado uma conexão com o GERINT.
 
 Exemplo:
-. require 'gerint'
-. conexao = Gerint::Comunicacao.new(ambiente='H', apikey="0ecc120b-c3bf-4e71-a5f9-cbaf0e394e34", usuario="integracao.2237180", senha="integracao.2237180", cnes="2237180")
+
+```ruby
+require 'gerint'
+conexao = Gerint::Comunicacao.new(ambiente='H', apikey="0ecc120b-c3bf-4e71-a5f9-cbaf0e394e34", usuario="integracao.2237180", senha="integracao.2237180",    cnes="2237180")
+```
 
 ### Busca situação das solicitações
 
 Busca a situação das solicitações feitas no GERINT
 
 Exemplo:
-. conexao.busca_situacao_solicitacoes
+
+```ruby
+conexao.busca_situacao_solicitacoes
+```
 
 ### Internação
 
 Informa a internação de um paciente
 
 Exemplo:
-. int=Gerint::Internacao.new
-. int.protocoloSolicitacao = "123546"
-. int.identificacaoLeito = "leito1"
-. int.codTipoLeito = "03"
-. int.dataInternacao = DateTime.now
-. conexao.internacao(int)
 
+```ruby
+int=Gerint::Internacao.new
+int.protocoloSolicitacao = "123546"
+int.identificacaoLeito = "leito1"
+int.codTipoLeito = "03"
+int.dataInternacao = DateTime.now
+conexao.internacao(int)
+```
