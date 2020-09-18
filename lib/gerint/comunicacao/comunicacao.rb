@@ -66,16 +66,22 @@ module Gerint
       https = Net::HTTP.new(url.host, url.port);
       https.use_ssl = true
       
-      request = Net::HTTP::Get.new(url)
+      request = Net::HTTP::Post.new(url)
       request["X-API-Key"] = @apikey
       request["usuario"] = @usuario
       request["senha"] = @senha
       request["cnes"] = @cnes
+      request["Content-Type"] = "application/json"
       request["Cookie"] = "SERVERID=WS4CH"
       request.body = body
+ 
+      puts "***************************"
+      puts request.body
+      puts "***************************"
       
       response = https.request(request)
       response.read_body
+ 
     end        
 
     def busca_situacao_solicitacoes
@@ -89,5 +95,12 @@ module Gerint
       retorno = self.executa_post(ender)
     end
 
+    def internacao(internacao)
+      ender = "/internacoes"   # Usado para internações e internações psiquiatricas
+      body = internacao.to_json
+      retorno = self.executa_post(ender, body)
+    end
+ 
   end
+
 end
