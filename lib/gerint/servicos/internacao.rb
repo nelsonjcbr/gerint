@@ -2,7 +2,7 @@
 module Gerint
     
     class Internacao < Gerint::Padrao
-        attr_accessor :protocoloSolicitacao, :identificacaoLeito, :codTipoLeito, :dataInternacao, :justificativaDataRetroativa
+        attr_accessor :protocoloSolicitacao, :identificacaoLeito, :codTipoLeito, :dataInternacao, :justificativaDataRetroativa, :leitoExtra
 
         def as_json(options={})
             h = {
@@ -13,6 +13,7 @@ module Gerint
             }
             
             h.store(:justificativaDataRetroativa , @justificativaDataRetroativa) unless @justificativaDataRetroativa.nil?
+            h.store(:leitoExtra, @leitoExtra) unless @leitoExtra.nil?
             h
         end
 
