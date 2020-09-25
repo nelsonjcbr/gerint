@@ -2,10 +2,10 @@
 module Gerint
     
     class SolicitacaoInternacao < Gerint::Padrao
-        attr_accessor :cartaoSus, :cpfPaciente, :tipoInternacao, :numeroProtocoloOrigem, :tipoProtocoloOrigem, :tipoAcesso, 
-        attr_accessor :internacaoPropria, :tipoLeito, :cidPrincipal, :cpfProfissionalSolicitante, :sinaisSintomas, 
-        attr_accessor :justificativaInternacao, :cor, :frequenciaCardiaca, :frequenciaRespiratoria, :pressaoArterialMaxima, 
-        attr_accessor :pressaoArterialMinima, :temperatura, :saturacaoO2, :sensorio, :debitoUrinario, :procedimento, 
+        attr_accessor :cartaoSus, :cpfPaciente, :tipoInternacao, :numeroProtocoloOrigem, :tipoProtocoloOrigem, :tipoAcesso
+        attr_accessor :internacaoPropria, :tipoLeito, :cidPrincipal, :cpfProfissionalSolicitante, :sinaisSintomas
+        attr_accessor :justificativaInternacao, :cor, :frequenciaCardiaca, :frequenciaRespiratoria, :pressaoArterialMaxima
+        attr_accessor :pressaoArterialMinima, :temperatura, :saturacaoO2, :sensorio, :debitoUrinario, :procedimento
         attr_accessor :dialise, :suporteO2, :fluxo, :fiO2, :satO2, :peep, :condicao, :nome, :sexo, :idade, :codigoMunicipio
         attr_accessor :endereco, :codigoEspecialidade, :isolamentoNecessario, :germe1, :germe2, :germe3, :germMulriresistente
         attr_accessor :possuiComorbidade, :comorbidade1, :comorbidade2, :comorbidade3, :dataHoraNascimento, :dataSolicitacao
@@ -34,30 +34,30 @@ module Gerint
             h.store(:sensorio,              @sensorio)              unless @sensorio.nil?
             h.store(:debitoUrinario,        @debitoUrinario)        unless @debitoUrinario.nil?
             h.store(:procedimento,          @procedimento)          unless @procedimento.nil?
-            h.store(:dialise,               @dialise                unless @dialise.nil?
+            h.store(:dialise,               @dialise)               unless @dialise.nil?
             h.store(:suporteO2,             @suporteO2)             unless @suporteO2.nil?
             h.store(:fluxo,                 @fluxo)                 unless @fluxo.nil?
             h.store(:fiO2,                  @fiO2)                  unless @fiO2.nil?
             h.store(:satO2,                 @satO2)                 unless @satO2.nil?
             h.store(:peep,                  @peep)                  unless @peep.nil?
-            h.store(:condicao               @condicao)              unless @condicao.nil?
-            h.store(:nome                   @nome)                  unless @nome.nil?)
-            h.store(:sexo                   @sexo)                  unless @sexo.nil?)
-            h.store(:idade                  @idade)                 unless @idade.nil?)
-            h.store(:condigoMunicipio       @codigoMunicipio)       unless @codigoMunicipio.nil?)
-            h.store(:endereco               @endereco)              unless @endereco.nil?)
-            h.store(:codigoEspecialidade    @codigoEspecialiade)    unless @codigoEspecialidade.nil?)
-            h.store(:isolamentoNecessario   @isolamentoNecessario)  unless @isolamentoNecessario.nil?)
-            h.store(:germe1                 @germe1)                unless @germe1.nil?)
-            h.store(:germe2                 @germe2)                unless @germe2.nil?)
-            h.store(:germe3                 @germe3)                unless @germe3.nil?)
-            h.store(:germeMultiresistente   @germeMultiresistente)  unless @germeMultiresistente.nil?)
-            h.store(:possuiComorbidade      @possuiComorbidade)     unless @possuiComorbidade.nil?)
-            h.store(:comorbidade1           @comorbidade1)          unless @comorbidade1.nil?)
-            h.store(:comorbidade2           @comorbidade2)          unless @comorbidade2.nil?)
-            h.store(:comorbidade3           @comorbidade3)          unless @comorbidade3.nil?)
-            h.store(:dataHoraNascimento     @dataHoraNascimento)    unless @dataHoraNascimento.nil?)
-            h.store(:dataSolicitacao        @dataSolicitacao)       unless @dataSolicitacao.nil?)
+            h.store(:condicao,              @condicao)              unless @condicao.nil?
+            h.store(:nome,                  @nome)                  unless @nome.nil?
+            h.store(:sexo,                  @sexo)                  unless @sexo.nil?
+            h.store(:idade,                 @idade)                 unless @idade.nil?
+            h.store(:condigoMunicipio,      @codigoMunicipio)       unless @codigoMunicipio.nil?
+            h.store(:endereco,              @endereco)              unless @endereco.nil?
+            h.store(:codigoEspecialidade,   @codigoEspecialiade)    unless @codigoEspecialidade.nil?
+            h.store(:isolamentoNecessario,  @isolamentoNecessario)  unless @isolamentoNecessario.nil?
+            h.store(:germe1,                @germe1)                unless @germe1.nil?
+            h.store(:germe2,                @germe2)                unless @germe2.nil?
+            h.store(:germe3,                @germe3)                unless @germe3.nil?
+            h.store(:germeMultiresistente,  @germeMultiresistente)  unless @germeMultiresistente.nil?
+            h.store(:possuiComorbidade,     @possuiComorbidade)     unless @possuiComorbidade.nil?
+            h.store(:comorbidade1,          @comorbidade1)          unless @comorbidade1.nil?
+            h.store(:comorbidade2,          @comorbidade2)          unless @comorbidade2.nil?
+            h.store(:comorbidade3,          @comorbidade3)          unless @comorbidade3.nil?
+            h.store(:dataHoraNascimento,    @dataHoraNascimento)    unless @dataHoraNascimento.nil?
+            h.store(:dataSolicitacao,       @dataSolicitacao)       unless @dataSolicitacao.nil?
             h
         end
 

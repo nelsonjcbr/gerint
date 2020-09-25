@@ -89,10 +89,16 @@ module Gerint
       retorno = self.executa_get(ender)
     end
 
-    def solicitacao_internacao
+    def solicitacao_internacao(solicitacao_internacao)
       ender = "/solicitacoes"
-      body = 
-      retorno = self.executa_post(ender)
+      body = solicitacao_internacao.to_json
+      retorno = self.executa_post(ender, body)
+    end
+
+    def solicitacao_internacao_psiquiatria(solicitacao_internacao_psiquiatria)
+      ender = "/solicitacoes/psiquiatria"
+      body = solicitacao_internacao_psiquiatria.to_json
+      retorno = self.executa_post(ender, body)
     end
 
     def internacao(internacao)

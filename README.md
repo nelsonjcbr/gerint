@@ -56,8 +56,6 @@ sol = Gerint::SolicitacaoInternacao.new
 sol.cartaoSus = "898004081765334"
 sol.cpfPaciente = "79423914934"
 sol.tipoInternacao = "URGENCIA"
-sol.numeroProtocoloOrigem = ""
-sol.tipoProtocoloOrigem = ""
 sol.tipoAcesso = "samuPoa"
 sol.internacaoPropria = "SIM"
 sol.tipoLeito = "OBSTETRICO"
@@ -80,7 +78,86 @@ sol.suporteO2 = "AR_AMBIENTE"
 sol.codigoEspecialidade = "374974"
 sol.isolamentoNecessario = "NAO"
 sol.possuiComorbidade = "NAO"
-conexao.solicitaInternacao(sol)
+conexao.solicitacao_internacao(sol)
+```
+
+#### Retorno com sucesso:
+
+Quando a solicitação é aceita:
+
+```json
+{ "numeroCERIH": "202000021270",
+  "procedimento": "TURBINECTOMIA",
+  "situacao": "INTERNACAO_AUTORIZADA", 
+  "dataSolicitacao":1600978049186,
+  "nomeUnidadeEncaminhada":null,
+  "cnesUnidadeEncaminhada":null,
+  "mensagem":null,
+  "cartaoSUS": "708903767492018",
+  "inicioInternacao":null,
+  "fimInternacao":null
+} 
+```
+
+Quando a solicitação já existe:
+```json
+{ "numeroCERIH": "202000021270",
+  "procedimento":null,
+  "situacao":null,
+  "dataSolicitacao":null,
+  "nomeUnidadeEncaminhada": null,
+  "cnesUnidadeEncaminhada": null,
+  "mensagem": "Já existe solicitação autorizada neste hospital para este paciente.",
+  "cartaoSUS": null,
+  "inicioInternacao": null,
+  "fimInternacao":null
+}
+```
+
+### Solicitação de Internação para Psiquiatria
+
+Registra uma solicitação de internação pata o tipo de leito psiquiatria no GERINT.
+
+Exemplo:
+
+```ruby
+sol = Gerint::SolicitacaoInternacaoPsiquiatria.new
+sol.cpfPaciente = "33960500025"
+sol.tipoInternacao = "URGENCIA"
+sol.tipoAcesso = "samuPoa"
+sol.internacaoPropria = "SIM"
+sol.tipoLeito = "PSIQUIATRICO"
+sol.cidPrincipal =  "J180"
+sol.cpfProfissionalSolicitante = "47749504087"
+sol.sinaisSintomas = "Paciente apresenta comprometimento da função hepática"
+sol.justificativaInternacao = "Paciente necessita de cuidados prolongados, necessita internação para esse cuidado"
+sol.cor = "LARANJA"
+sol.frequenciaCardiaca = "80"
+sol.frequenciaRespiratoria = "18"
+sol.pressaoArterialMaxima = "120"
+sol.pressaoArterialMinima = "80"
+sol.temperatura = "37.5"
+sol.saturacaoO2 = "089"
+sol.sensorio = "ALERTA"
+sol.debitoUrinario = "ANURIA"
+sol.procedimento = "0404010415"
+sol.dialise = "NAO"
+sol.suporteO2 = "AR_AMBIENTE"
+sol.codigoEspecialidade = "374974"
+sol.isolamentoNecessario = "NAO"
+sol.possuiComorbidade = "NAO"
+sol.internacaoPsiquiatricaPrevia = "NAO"
+sol.riscoHeteroagressao = "NAO"
+sol.pacienteMotivado = "NA"
+sol.acompanhamentoPsiquiatricoAmbulatorial = "NAO"
+sol.usoSubstanciaPsicoativa = "SIM"
+sol.substanciasPsicoativas = "Cocaina"
+sol.suporteFamiliar = "presente"
+sol.planoSuicida = "NAO"
+sol.usoMedicamentoComorbidadesPsiquiatria = "SIM"
+sol.medicamentoComorbidadePsiquiatria = "Rivotril"
+sol.gravidaPsiquiatria = "NAO"
+conexao.solicitacao_internacao(sol)
 ```
 
 ### Internação
