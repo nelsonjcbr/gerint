@@ -35,16 +35,6 @@ require 'gerint'
 conexao = Gerint::Comunicacao.new(ambiente='H', apikey="0ecc120b-c3bf-4e71-a5f9-cbaf0e394e34", usuario="integracao.2237180", senha="integracao.2237180",    cnes="2237180")
 ```
 
-### Busca situação das solicitações
-
-Busca a situação das solicitações feitas no GERINT
-
-Exemplo:
-
-```ruby
-conexao.busca_situacao_solicitacoes
-```
-
 ### Solicitação de Internação
 
 Registra uma solicitação de internação no GERINT.
@@ -193,7 +183,41 @@ int.dataInternacao = DateTime.now
 conexao.internacao(int)
 ```
 
-CONTINUAR AQUI
+### Liberação de Internação / Alta
+
+Registra a alta/óbito da internação de um paciente.
+
+Exemplo:
+
+((( Continuar aqui ....)))
+
+### Transferir paciente de leito
+
+Registra a transferencia de leito de um paciente que está no GERINT.
+
+Exemplo:
+
+((( Continuar aqui ....)))
+
+### Busca situação das solicitações
+
+Busca a situação das solicitações feitas no GERINT
+
+Exemplo:
+
+```ruby
+conexao.busca_situacao_solicitacoes
+```
+
+### Consulta solicitações do executante
+
+Retorna uma lista de objetos com informações de todas as solicitações nas situações ‘INTERNACAO_AUTORIZADA’ e ‘INTERNADA’ de uma unidade executante.
+
+Exemplo:
+
+```ruby
+conexao.busca_solicitacoes_executante
+```
 
 ## Development
 

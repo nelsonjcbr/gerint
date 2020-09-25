@@ -89,6 +89,11 @@ module Gerint
       retorno = self.executa_get(ender)
     end
 
+    def busca_solicitacoes_executante(filtros="")
+      ender = "/solicitacoes/buscaSolicitacoesExecutante#{filtros}"
+      retorno = self.executa_get(ender)
+    end
+
     def solicitacao_internacao(solicitacao_internacao)
       ender = "/solicitacoes"
       body = solicitacao_internacao.to_json
