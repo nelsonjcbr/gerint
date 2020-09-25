@@ -2,13 +2,9 @@
 module Gerint
     
     class SolicitacaoInternacaoPsiquiatria < Gerint::SolicitacaoInternacao
-        attr_accessor :cartaoSus, :cpfPaciente, :tipoInternacao, :numeroProtocoloOrigem, :tipoProtocoloOrigem, :tipoAcesso
-        attr_accessor :internacaoPropria, :tipoLeito, :cidPrincipal, :cpfProfissionalSolicitante, :sinaisSintomas
-        attr_accessor :justificativaInternacao, :cor, :frequenciaCardiaca, :frequenciaRespiratoria, :pressaoArterialMaxima
-        attr_accessor :pressaoArterialMinima, :temperatura, :saturacaoO2, :sensorio, :debitoUrinario, :procedimento
-        attr_accessor :dialise, :suporteO2, :fluxo, :fiO2, :satO2, :peep, :condicao, :nome, :sexo, :idade, :codigoMunicipio
-        attr_accessor :endereco, :codigoEspecialidade, :isolamentoNecessario, :germe1, :germe2, :germe3, :germMulriresistente
-        attr_accessor :possuiComorbidade, :comorbidade1, :comorbidade2, :comorbidade3, :dataHoraNascimento, 
+        attr_accessor :internacaoPsiquiatricaPrevia, :riscoHeteroagressao, :pacienteMotivado, :acompanhamentoPsiquiatricoAmbulatorial
+        attr_accessor :usoSubstanciaPsicoativa, :substanciasPsicoativas, :suporteFamiliar, :planoSuicida
+        attr_accessor :usoMedicamentoComorbidadesPsiquiatria, :medicamentoComorbidadePsiquiatria, :gravidaPsiquiatria
         
         # :dataSolicitacao campo que tem na solicitacao de internação mas não tem para psiquiatria
 

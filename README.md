@@ -160,6 +160,8 @@ sol.gravidaPsiquiatria = "NAO"
 conexao.solicitacao_internacao(sol)
 ```
 
+Os retornos são iguais à solicitação de internação
+
 ### Internação
 
 Informa a internação de um paciente 
