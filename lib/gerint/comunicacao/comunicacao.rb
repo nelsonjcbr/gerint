@@ -112,6 +112,18 @@ module Gerint
       retorno = self.executa_post(ender, body)
     end
  
+    def alta(alta)
+      ender = "/internacoes/liberar"   # No GERINT o serviço é chamado de Liberação de Internação
+      body = alta.to_json
+      retorno = self.executa_post(ender, body)
+    end
+
+    def transferir_leito(transf)
+      ender = "/internacoes/transferir"
+      body = alta.to_json
+      retorno = self.executa_post(ender, body)
+    end
+ 
   end
 
 end

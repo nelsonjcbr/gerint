@@ -189,7 +189,18 @@ Registra a alta/óbito da internação de um paciente.
 
 Exemplo:
 
-((( Continuar aqui ....)))
+```ruby
+int=Gerint::Alta.new
+int.protocoloSolicitacao="201700020330"
+int.dataAlta = DateTime.now
+int.identMotivoAlta = "ALTA"
+int.cpfMedicoAlta = "47749504087"
+int.identEncaminhamentoPosAlta = "atencaoBasica"
+int.resumoInternacao = "Descrever o resumo da internação do paciente"
+int.prescricaoAlta = "Descrever a prescrição da alta do paciente"
+int.cidPrincipal = "J180"
+conexao.alta(int)
+```
 
 ### Transferir paciente de leito
 
@@ -197,7 +208,15 @@ Registra a transferencia de leito de um paciente que está no GERINT.
 
 Exemplo:
 
-((( Continuar aqui ....)))
+```ruby
+int=Gerint::TransferirLeito.new
+int.protocoloSolicitacao="201700020330"
+int.identificacaoLeito="leito1"
+int.codTipoLeito="03"
+int.justifTransferencia = "Justificativa da transferencia(opcional)"
+int.leitoExtra = true
+conexao.alta(int)
+```
 
 ### Busca situação das solicitações
 
