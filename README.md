@@ -214,8 +214,8 @@ int.protocoloSolicitacao="201700020330"
 int.identificacaoLeito="leito1"
 int.codTipoLeito="03"
 int.justifTransferencia = "Justificativa da transferencia(opcional)"
-int.leitoExtra = true
-conexao.alta(int)
+int.leitoExtra = false
+conexao.transferir_leito(int)
 ```
 
 ### Busca situação das solicitações

@@ -5,7 +5,7 @@ require "gerint/comunicacao/comunicacao"
 #Servicos
 require "gerint/servicos/padrao"
 require "gerint/servicos/internacao"
-require "gerint/servicos/tranferir_leito"
+require "gerint/servicos/transferir_leito"
 require "gerint/servicos/alta"
 require "gerint/servicos/solicitacao_internacao"
 require "gerint/servicos/solicitacao_internacao_psiquiatria"

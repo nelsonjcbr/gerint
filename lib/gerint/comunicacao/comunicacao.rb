@@ -120,7 +120,7 @@ module Gerint
 
     def transferir_leito(transf)
       ender = "/internacoes/transferir"
-      body = alta.to_json
+      body = transf.to_json
       retorno = self.executa_post(ender, body)
     end
  
