@@ -4,6 +4,7 @@ module Gerint
     class Alta < Gerint::Padrao
         attr_accessor :protocoloSolicitacao, :dataAlta, :identMotivoAlta, :cpfMedicoAlta, :identEncaminhamentoPosAlta
         attr_accessor :resumoInternacao, :prescricaoAlta, :cidPrincipal
+        attr_accessor :fileName, :mimeType, :conteudo
 
         def as_json(options={})
             h = {
@@ -11,6 +12,9 @@ module Gerint
                 dataAlta:               @dataAlta,
                 identMotivoAlta:        @identMotivoAlta
             }
+            h.store(:fileName,          @fileName)          unless @fileName.nil?
+            h.store(:mimeType,          @mimeType)          unless @mimeType.nil?
+            h.store(:conteudo,          @conteudo)          unless @conteudo.nil?
             h.store(:cpfMedicoAlta,     @cpfMedicoAlta)     unless @cpfMedicoAlta.nil?
             h.store(:identEncaminhamentoPosAlta, @identEncaminhamentoPosAlta) unless @identEncaminhamentoPosAlta.nil?
             h.store(:resumoInternacao,  @resumoInternacao)  unless @resumoInternacao.nil?

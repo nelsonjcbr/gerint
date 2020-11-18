@@ -13,7 +13,7 @@ module Gerint
       @senha = senha
       
       @cnes = cnes
-      if ambiente = 'H' && apikey = ''  # Se não informar a apikey, pega os dados de teste do HEPA
+      if ambiente == 'H' && apikey == ''  # Se não informar a apikey, pega os dados de teste do HEPA
         @apikey  = "0ecc120b-c3bf-4e71-a5f9-cbaf0e394e34"
         @usuario = "integracao.2237180"
         @senha   = "integracao.2237180"
