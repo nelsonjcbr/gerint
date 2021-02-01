@@ -204,6 +204,7 @@ int.prescricaoAlta = "Descrever a prescrição da alta do paciente"
 int.cidPrincipal = "J180"
 conexao.alta(int)
 ```
+Os campos fileName, mimeType e conteudo, foram inseridos na versao 0.1.3
 
 ### Transferir paciente de leito
 

@@ -111,10 +111,22 @@ module Gerint
       body = internacao.to_json
       retorno = self.executa_post(ender, body)
     end
+
+    def reversao_internacao(reversao_internacao)
+      ender = "/internacoes/reverterInternacao"   # Usado para reversao de internações
+      body = reversao_internacao.to_json
+      retorno = self.executa_post(ender, body)
+    end
  
     def alta(alta)
       ender = "/internacoes/liberar"   # No GERINT o serviço é chamado de Liberação de Internação
       body = alta.to_json
+      retorno = self.executa_post(ender, body)
+    end
+
+    def reversao_alta(reversao_alta)
+      ender = "/internacoes/reverterAlta"   # Usado para reversao de internações
+      body = reversao_alta.to_json
       retorno = self.executa_post(ender, body)
     end
 
