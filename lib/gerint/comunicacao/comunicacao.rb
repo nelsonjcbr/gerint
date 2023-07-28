@@ -13,12 +13,6 @@ module Gerint
       @senha = senha
       
       @cnes = cnes
-      if ambiente == 'H' && apikey == ''  # Se não informar a apikey, pega os dados de teste do HEPA
-        @apikey  = "0ecc120b-c3bf-4e71-a5f9-cbaf0e394e34"
-        @usuario = "integracao.2237180"
-        @senha   = "integracao.2237180"
-        @cnes    = "2237180"
-      end
     end
 
     def credenciais # Consulta as credenciais instanciadas
@@ -34,8 +28,12 @@ module Gerint
         "https://api.procempa.com.br/apiman-gateway/saude/api/1.0/gerint"
       elsif @ambiente == 'H' 
         "https://api-hom.procempa.com.br/apiman-gateway/saude/api/1.1/gerint"
+      elsif @ambiente == 'P2' 
+        "https://apigateway.procempa.com.br/apiman-gateway/saude/saude-api/1.0/gerint"
+      elsif @ambiente == 'H2' 
+        "https://apigateway-hom.procempa.com.br/apiman-gateway/saude/saude-api/1.0/gerint"
       else 
-        "ERRO: Ambiente inválido, informa P para produção ou H para Homologação"
+        "ERRO: Ambiente inválido, informa P, H, P2 ou H2"
       end
     end
 
