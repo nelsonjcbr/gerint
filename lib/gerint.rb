@@ -11,6 +11,8 @@ require "gerint/servicos/solicitacao_internacao"
 require "gerint/servicos/solicitacao_internacao_psiquiatria"
 require "gerint/servicos/reversao_internacao"
 require "gerint/servicos/reversao_alta"
+require "gerint/servicos/desbloqueio_leito"
+require "gerint/servicos/bloqueio_leito"
 
 module Gerint
   class Error < StandardError; end  # Deixado aqui como exemplo, pra criar uma classe de erros
