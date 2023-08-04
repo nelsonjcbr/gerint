@@ -134,6 +134,17 @@ module Gerint
       retorno = self.executa_post(ender, body)
     end
  
+    def bloquear_leito(bloqueio_leito) # Usado para bloqueio de leito
+      ender = "/leitos/bloquearLeito"
+      body = bloqueio_leito.to_json
+      retorno = self.executa_post(ender, body)
+    end
+
+    def desbloquear_leito(desbloqueio_leito) # Usado para desbloqueio de leito
+      ender = "/leitos/desbloquearLeito"
+      body = desbloqueio_leito.to_json
+      retorno = self.executa_post(ender, body)
+    end
   end
 
 end
