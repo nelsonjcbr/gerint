@@ -7,7 +7,7 @@ module Gerint
         attr_accessor :justificativaInternacao, :cor, :frequenciaCardiaca, :frequenciaRespiratoria, :pressaoArterialMaxima
         attr_accessor :pressaoArterialMinima, :temperatura, :saturacaoO2, :sensorio, :debitoUrinario, :procedimento
         attr_accessor :dialise, :suporteO2, :fluxo, :fiO2, :satO2, :peep, :condicao, :nome, :sexo, :idade, :codigoMunicipio
-        attr_accessor :endereco, :codigoEspecialidade, :isolamentoNecessario, :germe1, :germe2, :germe3, :germMulriresistente
+        attr_accessor :endereco, :codigoEspecialidade, :isolamentoNecessario, :germe1, :germe2, :germe3, :germeMultiresistente
         attr_accessor :possuiComorbidade, :comorbidade1, :comorbidade2, :comorbidade3, :dataHoraNascimento, :dataSolicitacao
 
         def as_json(options={})
