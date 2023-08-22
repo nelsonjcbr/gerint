@@ -11,18 +11,18 @@ module Gerint
         attr_accessor :possuiComorbidade, :comorbidade1, :comorbidade2, :comorbidade3, :dataHoraNascimento, :dataSolicitacao
 
         def as_json(options={})
-            h = {   cartaoSus: @cartaoSus,
-                    cpfPaciente: @cpfPaciente,
-                    tipoInternacao: @tipoInternacao,
-                    numeroProtocoloOrigem: @numeroProtocoloOrigem,
-                    tipoProtocoloOrigem: @tipoProtocoloOrigem,
-                    internacaoPropria: @internacaoPropria,
-                    tipoLeito: @tipoLeito,
-                    cidPrincipal: @cidPrincipal,
+            h = {   cidPrincipal: @cidPrincipal,
                     cpfProfissionalSolicitante: @cpfProfissionalSolicitante,
                     sinaisSintomas: @sinaisSintomas,
                     justificativaInternacao: @justificativaInternacao
             }
+                    
+            h.store(:cartaoSus,             @cartaoSus)             unless @cartaoSus.nil?
+            h.store(:cpfPaciente,           @cpfPaciente)           unless @cpfPaciente.nil?
+            h.store(:tipoInternacao,        @tipoInternacao)        unless @tipoInternacao.nil?
+            h.store(:internacaoPropria,     @internacaoPropria)     unless @internacaoPropria.nil?
+            h.store(:tipoLeito,             @tipoLeito)             unless @tipoLeito.nil?
+            h.store(:numeroProtocoloOrigem, @numeroProtocoloOrigem) unless @numeroProtocoloOrigem.nil?
             h.store(:tipoAcesso,            @tipoAcesso)            unless @tipoAcesso.nil?
             h.store(:cor,                   @cor)                   unless @cor.nil?
             h.store(:frequenciaCardiaca,    @frequenciaCardiaca)    unless @frequenciaCardiaca.nil?
