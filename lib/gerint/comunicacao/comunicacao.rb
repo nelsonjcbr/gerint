@@ -145,6 +145,12 @@ module Gerint
       body = desbloqueio_leito.to_json
       retorno = self.executa_post(ender, body)
     end
+
+    def evoluir_paciente(evolucao_paciente) # Usado para evoluções do paciente
+      ender = "/solicitacoes/evolucaoPaciente"
+      body = evolucao_paciente.to_json
+      retorno = self.executa_post(ender, body)
+    end
   end
 
 end
