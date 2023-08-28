@@ -44,7 +44,7 @@ module Gerint
             h.store(:nome,                  @nome)                  unless @nome.nil?
             h.store(:sexo,                  @sexo)                  unless @sexo.nil?
             h.store(:idade,                 @idade)                 unless @idade.nil?
-            h.store(:condigoMunicipio,      @codigoMunicipio)       unless @codigoMunicipio.nil?
+            h.store(:codigoMunicipio,       @codigoMunicipio)       unless @codigoMunicipio.nil?
             h.store(:endereco,              @endereco)              unless @endereco.nil?
             h.store(:codigoEspecialidade,   @codigoEspecialiade)    unless @codigoEspecialidade.nil?
             h.store(:isolamentoNecessario,  @isolamentoNecessario)  unless @isolamentoNecessario.nil?
