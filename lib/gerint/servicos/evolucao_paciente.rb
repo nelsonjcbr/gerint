@@ -49,7 +49,7 @@ module Gerint
             h.store(:germe1,                @germe1)                unless @germe1.nil?
             h.store(:germe2,                @germe2)                unless @germe2.nil?
             h.store(:germe3,                @germe3)                unless @germe3.nil?
-            h.store(:germeMultiresistente,  @germeMultiresistente)  unless @germeMultiresistente.nil?
+            h.store(:germeMultiResistente,  @germeMultiresistente)  unless @germeMultiresistente.nil?
             h
         end
 
@@ -65,6 +65,10 @@ module Gerint
         
         def to_json(*options)
             as_json(*options).to_json(*options)
+        end
+
+        def dataHoraRuptura=(value)
+            @dataHoraRuptura=value.iso8601(3)
         end
  
     end
