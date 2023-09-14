@@ -8,7 +8,8 @@ module Gerint
         attr_accessor :pressaoArterialMinima, :temperatura, :saturacaoO2, :sensorio, :debitoUrinario, :procedimento
         attr_accessor :dialise, :suporteO2, :fluxo, :fiO2, :satO2, :peep, :condicao, :nome, :sexo, :idade, :codigoMunicipio
         attr_accessor :endereco, :codigoEspecialidade, :isolamentoNecessario, :germe1, :germe2, :germe3, :germeMultiresistente
-        attr_accessor :possuiComorbidade, :comorbidade1, :comorbidade2, :comorbidade3, :dataHoraNascimento, :dataSolicitacao
+        attr_accessor :possuiComorbidade, :comorbidade1, :comorbidade2, :comorbidade3, :dataHoraNascimento, :dataSolicitacao,
+        attr_accessor :tipoPaciente
 
         def as_json(options={})
             h = {   cidPrincipal: @cidPrincipal,
@@ -58,6 +59,7 @@ module Gerint
             h.store(:comorbidade3,          @comorbidade3)          unless @comorbidade3.nil?
             h.store(:dataHoraNascimento,    @dataHoraNascimento)    unless @dataHoraNascimento.nil?
             h.store(:dataSolicitacao,       @dataSolicitacao)       unless @dataSolicitacao.nil?
+            h.store(:tipoPaciente,          @tipoPaciente)          unless @tipoPaciente.nil?
             h
         end
 
